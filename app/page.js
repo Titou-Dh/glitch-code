@@ -7,7 +7,7 @@ import Image from "next/image";
 const App = () => {
 
   const targetTime = new Date();
-  targetTime.setUTCHours(13);
+  targetTime.setUTCHours(12);
   targetTime.setUTCMinutes(0);
   targetTime.setUTCSeconds(0);
   return (
