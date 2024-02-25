@@ -11,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <footer className="absolute bottom-0 text-center w-full bg-blue-700  py-2">&copy;GDSC ESSTHS 2024</footer>  
+      </body>
+
     </html>
   );
 }
