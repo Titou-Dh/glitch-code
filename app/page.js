@@ -7,14 +7,13 @@ import Image from "next/image";
 const App = () => {
 
   const targetTime = new Date();
-  targetTime.setUTCHours(1);
-  targetTime.setUTCMinutes(45);
+  targetTime.setUTCHours(2);
+  targetTime.setUTCMinutes(30);
   targetTime.setUTCSeconds(0);
-
   return (
     <div className="flex flex-col justify-center items-center h-full">
       <Image src={glitch_code} alt="Glitch Code" className='my-12'  width={450} />
-      <Countdown targetTime={targetTime} />
+      <Countdown targetTime={targetTime} text='' done={false} />
     </div>
   );
 };
