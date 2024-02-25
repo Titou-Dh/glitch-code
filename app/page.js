@@ -7,8 +7,8 @@ import Image from "next/image";
 const App = () => {
 
   const targetTime = new Date();
-  targetTime.setUTCHours(2);
-  targetTime.setUTCMinutes(30);
+  targetTime.setUTCHours(12);
+  targetTime.setUTCMinutes(0);
   targetTime.setUTCSeconds(0);
   return (
     <div className="flex flex-col justify-center items-center h-full">

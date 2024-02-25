@@ -5,8 +5,8 @@ import Countdown from '../../components/Countdown';
 const Page = () => {
   const [isHidden, setIsHidden] = useState(false);
   const targetTime = new Date();
-  targetTime.setUTCHours(2);
-  targetTime.setUTCMinutes(51);
+  targetTime.setUTCHours(17);
+  targetTime.setUTCMinutes(0);
   targetTime.setUTCSeconds(0);
 
   const handleDownload = () => {
