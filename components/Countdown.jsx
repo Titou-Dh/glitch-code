@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 const Countdown = ({ targetTime, text, done }) => {
   const calculateTimeLeft = () => {
@@ -24,7 +24,7 @@ const Countdown = ({ targetTime, text, done }) => {
     const timer = setTimeout(() => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
-      
+
       if (Object.keys(newTimeLeft).length === 0) {
         setCompleted(true);
       }
@@ -42,13 +42,17 @@ const Countdown = ({ targetTime, text, done }) => {
       {completed ? (
         !done ? (
           <Link href="/get_assets">
-            <p className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg px-7 text-xl py-5 text-center me-2 mb-2'>Get Assets</p>
+            <p className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg px-7 text-xl py-5 text-center me-2 mb-2">
+              Get Assets
+            </p>
           </Link>
         ) : (
-          <p className='text-9xl font-bold  capitalize'>{text}</p>
+          <p className="text-9xl font-bold  capitalize">{text}</p>
         )
       ) : (
-        <p className='font-bold text-9xl'>{`${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`}</p>
+        <p className="font-bold text-9xl">{`${formatTime(
+          timeLeft.hours
+        )}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`}</p>
       )}
     </div>
   );
